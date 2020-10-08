@@ -34,6 +34,11 @@ class Pokemons extends React.Component {
   constructor(props) {
     super(props);
     this.state = {numberToLoad: 10};
+    this.loadMore = this.loadMore.bind(this);
+  }
+
+  loadMore() {
+    this.setState(({numberToLoad}) => ({numberToLoad: numberToLoad + 5}));
   }
 
   render() {
@@ -45,7 +50,18 @@ class Pokemons extends React.Component {
       React.createElement(Pokemon, {id: pokemonId, key: pokemonId})
     );
 
-    return React.createElement('div', {className: 'pokemons'}, pokemons);
+    const gallery = React.createElement(
+      'div',
+      {className: 'pokemons'},
+      pokemons
+    );
+
+    return React.createElement(
+      'div',
+      null,
+      gallery,
+      React.createElement('button', {onClick: this.loadMore}, 'Load more')
+    );
   }
 }
 
