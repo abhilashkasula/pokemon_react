@@ -67,9 +67,6 @@ class Pokemons extends React.Component {
 
 const pokemons = React.createElement(Pokemons);
 
-const title = React.createElement('h1', {className: 'title'}, 'Pokemon Gallery');
+// const title = React.createElement('h1', {className: 'title'}, 'Pokemon Gallery');
 const mainContainer = document.querySelector('#main-container');
-ReactDOM.render(
-  React.createElement('div', null, title, pokemons),
-  mainContainer
-);
+ReactDOM.render(pokemons, mainContainer);
