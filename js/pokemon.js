@@ -19,7 +19,7 @@ class Pokemon extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://pokeapi.co/api/v2/pokemon/1')
+    fetch(`https://pokeapi.co/api/v2/pokemon/${this.props.id}`)
       .then((res) => res.json())
       .then(({name, sprites}) => {
         this.setState(() => ({
@@ -30,7 +30,7 @@ class Pokemon extends React.Component {
   }
 }
 
-const bulbasaur = React.createElement(Pokemon);
+const bulbasaur = React.createElement(Pokemon, {id: 1});
 
 const title = React.createElement('h1', null, 'Pokemon Gallery');
 const mainContainer = document.querySelector('#main-container');
