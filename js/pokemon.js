@@ -1,3 +1,20 @@
+const Pokemon = (props) =>
+  React.createElement(
+    'div',
+    null,
+    React.createElement('p', null, props.name),
+    React.createElement('img', {src: props.imageUrl})
+  );
+
+const balbasaur = React.createElement(Pokemon, {
+  name: 'balbasaur',
+  imageUrl:
+    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
+});
+
 const title = React.createElement('h1', null, 'Pokemon Gallery');
-const container = document.querySelector('#main-container');
-ReactDOM.render(title, container);
+const mainContainer = document.querySelector('#main-container');
+ReactDOM.render(
+  React.createElement('div', null, title, balbasaur),
+  mainContainer
+);
