@@ -30,11 +30,30 @@ class Pokemon extends React.Component {
   }
 }
 
-const bulbasaur = React.createElement(Pokemon, {id: 1});
+class Pokemons extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {numberToLoad: 10};
+  }
+
+  render() {
+    const ids = new Array(this.state.numberToLoad)
+      .fill(1)
+      .map((_, index) => index + 1);
+
+    const pokemons = ids.map((pokemonId) =>
+      React.createElement(Pokemon, {id: pokemonId, key: pokemonId})
+    );
+
+    return React.createElement('div', null, pokemons);
+  }
+}
+
+const pokemons = React.createElement(Pokemons);
 
 const title = React.createElement('h1', null, 'Pokemon Gallery');
 const mainContainer = document.querySelector('#main-container');
 ReactDOM.render(
-  React.createElement('div', null, title, bulbasaur),
+  React.createElement('div', null, title, pokemons),
   mainContainer
 );
