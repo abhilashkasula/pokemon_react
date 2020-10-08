@@ -1,8 +1,8 @@
 const PokemonDetails = (props) =>
   React.createElement(
     'div',
-    null,
-    React.createElement('p', null, props.name),
+    {className: 'pokemon'},
+    React.createElement('p', {className: 'pokemon-name'}, props.name),
     React.createElement('img', {src: props.imageUrl})
   );
 
@@ -15,7 +15,7 @@ class Pokemon extends React.Component {
   render() {
     return this.state.loaded
       ? React.createElement(PokemonDetails, this.state.pokemonDetails)
-      : React.createElement('p', null, 'Loading...');
+      : React.createElement('p', {className: 'pokemon'}, 'Loading...');
   }
 
   componentDidMount() {
@@ -67,7 +67,7 @@ class Pokemons extends React.Component {
 
 const pokemons = React.createElement(Pokemons);
 
-const title = React.createElement('h1', null, 'Pokemon Gallery');
+const title = React.createElement('h1', {className: 'title'}, 'Pokemon Gallery');
 const mainContainer = document.querySelector('#main-container');
 ReactDOM.render(
   React.createElement('div', null, title, pokemons),
