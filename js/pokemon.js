@@ -60,7 +60,7 @@ class Pokemons extends React.Component {
       'div',
       null,
       gallery,
-      React.createElement('button', {onClick: this.loadMore}, 'Load more')
+      React.createElement('button', {onClick: this.loadMore, className: 'loadButton'}, 'Load more')
     );
   }
 }
