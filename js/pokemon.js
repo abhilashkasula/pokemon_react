@@ -6,8 +6,8 @@ const Pokemon = (props) =>
     React.createElement('img', {src: props.imageUrl})
   );
 
-const balbasaur = React.createElement(Pokemon, {
-  name: 'balbasaur',
+const bulbasaur = React.createElement(Pokemon, {
+  name: 'bulbasaur',
   imageUrl:
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
 });
