@@ -45,7 +45,7 @@ class Pokemons extends React.Component {
       React.createElement(Pokemon, {id: pokemonId, key: pokemonId})
     );
 
-    return React.createElement('div', null, pokemons);
+    return React.createElement('div', {className: 'pokemons'}, pokemons);
   }
 }
 
