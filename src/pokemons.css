@@ -1,11 +1,4 @@
 .pokemons {
   display: flex;
   flex-wrap: wrap;
-  width: 1320px;
-}
-
-@media only screen and (max-width: 600px) {
-  .pokemons {
-    width: 270px;
-  }
 }

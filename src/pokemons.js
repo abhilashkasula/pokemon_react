@@ -7,7 +7,7 @@ const Pokemons = (props) => {
     <Pokemon key={poke.name} name={poke.name} imgUrl={poke.img} />
   ));
 
-  return <div className="pokemons">{pokemons}</div>;
+  return <div className='pokemons'>{pokemons}</div>;
 };
 
 export default Pokemons;
