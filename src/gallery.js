@@ -5,7 +5,7 @@ import './gallery.css';
 
 const Gallery = () => {
   return (
-    <div>
+    <div className="container">
       <h1 className="app-heading">Pokemon Gallery</h1>
       <Pokemons pokemons={data.default} />;
     </div>
