@@ -1,7 +1,6 @@
 import React from 'react';
-import Pokemons from './pokemons';
-import * as data from './pokemon.json';
+import Gallery from './gallery';
 
-const App = () => <Pokemons pokemons={data.default} />;
+const App = () => <Gallery />;
 
 export default App;
